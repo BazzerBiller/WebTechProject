@@ -1,0 +1,111 @@
+<script src="../Script/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function (){
+        $('#intel').on({
+            click: function(){
+                $('#AMDcpuArticle').css('display', 'none')
+                $('#Intelarticle').css('display', 'none')
+                $('#Intelarticle' ).show( "slow" );
+                $('#Intelarticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+               
+            }
+        })
+        $('#amdcpu').on({
+            click: function(){
+                $('#Intelarticle').css('display', 'none')
+                $('#AMDcpuArticle').css('display', 'none')
+                $('#AMDcpuArticle' ).show( "slow" );
+                $('#AMDcpuArticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+                
+            }
+        })
+
+    })
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../Css/main.css">
+    <title>CPU</title>
+    <style>
+        #Intelarticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 40px;
+        }
+        #AMDcpuArticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+     <!-- UpperBar, Which Represents The Content Of The Page and Specific Header Navigation -->
+     <section id="upperbar">
+        <div id="HomePage"><h1><a href="index.html">H&W</a></h1> </div>
+        <nav>
+            <ul>
+                <li class="header" ><a href="gpu.html" >GPU</a></li>
+                <li class="header" ><a href="cpu.html" >CPU</a></li>
+                <li class="header" ><a href="mb.html" >MOTHERBOARD</a></li>
+                <li class="header" ><a href="ram.html" >RAM</a></li>
+                <li class="header" ><a href="game.html" >GAME</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
+    </section>
+        <div class="Grid-Body">
+        <br>
+        <div>
+            <div class="images">
+                <div id="intel" class="imageBlock"  > <img  src="../Images/Intel.png" alt=""> </div>
+                
+                <div id="amdcpu" class="imageBlock" > <img src="../Images/amdCPU.png" alt=""> </div>
+            </div>
+            <h2>What Is CPU?</h2>
+            tands for "Central Processing Unit." The CPU is the primary component of a computer that processes instructions. It runs the operating system and applications, constantly receiving input from the user or active software programs. It processes the data and produces output, which may stored by an application or displayed on the screen.
+
+            The CPU contains at least one processor, which is the actual chip inside the CPU that performs calculations. For many years, most CPUs only had one processor, but now it is common for a single CPU to have at least two processors or "processing cores." A CPU with two processing cores is called a dual-core CPU and models with four cores are called quad-core CPUs
+            <br>
+            *Click Those AMD and Nvidia Icons to find out more information about that brand.
+        </div>
+        <div id="Intelarticle"  style="display: none;">
+            <div> <img src="../Images/IntelCPU.png" alt=""></div>
+            <br>
+            <h2>What Is Intel?</h2>
+            <br>
+            The company specialises in the design of graphics processing units that are used in computers.
+
+             Nvidia is known as a market leader in the design of graphics processing units, or GPUs, for the gaming market, as well as system on chips, or SOCs, for the mobile computing and automotive markets.
+
+             Narrowing its focus in 2014 to target the gaming, professional visualization, data centre and automotive markets, Nvidia was first founded in 1993.
+
+             A big coup early on for the company came after the success of the GeForce GPUs, which led to Nvidia winning a contract to develop graphics hardware for the Xbox console.
+             <br>
+             <br>
+             *The Photo Seeing on the above is the Intel's one of the powerful CPU version = I9 9900K 
+         </div>
+        <div id="AMDcpuArticle"  style="display: none;" >
+            <div> <img src="../Images/AMDcpuPhoto.png" alt=""></div>
+            <h2>What Is AMD?</h2>
+            AMD is the second largest maker of personal computer microprocessors after Intel. They also make flash memory, integrated circuits for networking devices, and programmable logic devices. AMD reports that it has sold over 100 million x86 (Windows-compatible) microprocessors. Its Athlon (formerly called the "K7") microprocessor, delivered in mid-1999, was the the first to support a 200 MHz bus. In March, 2000, AMD announced the first 1 gigahertz PC microprocessor in a new version of the Athlon.
+            <br>
+            <br>
+            *The Photo Seeing on the above is the AMD's one of the powerful CPU version = RYZEN9 3990X
+        </div>
+
+
+    
+    
+    </div>
+    <script src="../Script/header.js" ></script>
+</body>
+</html>

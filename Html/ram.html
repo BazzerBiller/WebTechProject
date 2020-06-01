@@ -1,0 +1,103 @@
+<script src="../Script/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function (){
+        $('#corsair').on({
+            click: function(){
+                $('#HyperxArticle').css('display', 'none')
+                $('#CorsairArticle').css('display', 'none')
+                $('#CorsairArticle' ).show( "slow" );
+                $('#CorsairArticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+               
+            }
+        })
+        $('#hyperx').on({
+            click: function(){
+                $('#CorsairArticle').css('display', 'none')
+                $('#HyperxArticle').css('display', 'none')
+                $('#HyperxArticle' ).show( "slow" );
+                $('#HyperxArticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+                
+            }
+        })
+
+    })
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTHERBOARD</title>
+    <link rel="stylesheet" href="../Css/main.css">
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <style>
+        #HyperxArticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 45px;
+        }
+        #CorsairArticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 45px;
+        }
+    </style>
+</head>
+<body>
+    <section id="upperbar">
+        <div id="HomePage"><h1><a href="index.html">H&W</a></h1> </div>
+        <nav>
+            <ul>
+                <li class="header" ><a href="gpu.html" >GPU</a></li>
+                <li class="header" ><a href="cpu.html" >CPU</a></li>
+                <li class="header" ><a href="mb.html" >MOTHERBOARD</a></li>
+                <li class="header" ><a href="ram.html" >RAM</a></li>
+                <li class="header" ><a href="game.html" >GAME</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
+    </section>
+    <!-- Body Part Of The Website After UpperBar-->
+    <div class="Grid-Body">
+        <br>
+        <div>
+            <div class="images">
+                <div id="corsair" class="imageBlock"  > <img  src="../Images/Corsair.png" alt=""> </div>
+                
+                <div id="hyperx" class="imageBlock" > <img src="../Images/Hyperx.png" alt=""> </div>
+            </div>
+            <h2>What Is Ram?</h2>
+            Random-access memory, or RAM, is one of the most important components in all devices, from PCs, to smartphones, to games consoles. Without RAM, doing just about anything on any system would be much, much slower. Not having enough for the application or game you’re trying to run can bring things to a crawl or even prevent them from running at all.
+
+            But what is RAM exactly? In a nutshell, it’s an extremely fast component that temporarily stores all the information your PC needs right now and in the near future. Accessing that information in RAM is insanely fast, unlike slower hard drives which provide longer-term storage.
+            <br>
+            *Click Those Corsair and Hyperx Icons to find out more information about that brand.
+        </div>
+        <div id="CorsairArticle"  style="display: none;">
+            <div> <img src="../Images/CorsairRam.png" alt=""> </div>
+            <br>
+            <h2>What Is Corsair?</h2>
+            <br>
+            AsusTek Computer Inc.  is a Taiwan-based multinational computer and phone hardware and electronics company headquartered in Beitou District, 
+            Taipei, Taiwan. Its products include desktop computers, laptops, netbooks, mobile phones, networking equipment, monitors, WIFI routers, projectors, 
+            motherboards, graphics cards, melih, optical storage, multimedia products, peripherals, wearables, servers, workstations, and tablet PCs. The company is also an 
+            original equipment manufacturer (OEM).
+            
+             <br>
+             *The Photo Seeing on the above is the Corsair's one of the powerful Ram version = Corsair Dominator  
+         </div>
+        <div  id="HyperxArticle"  style="display: none;">
+            <div> <img src="../Images/HyperxRam.png" alt=""> </div>
+            <h2>What Is Hyperx?</h2>
+            AMD is the second largest maker of personal computer microprocessors after Intel. They also make flash memory, integrated circuits for networking devices, and programmable logic devices. AMD reports that it has sold over 100 million x86 (Windows-compatible) microprocessors. Its Athlon (formerly called the "K7") microprocessor, delivered in mid-1999, was the the first to support a 200 MHz bus. In March, 2000, AMD announced the first 1 gigahertz PC microprocessor in a new version of the Athlon.
+            <br>
+            *The Photo Seeing on the above is the Hyperx's one of the powerful MotherBoard version = Hyperx The Destroyer 
+        </div>
+        <script src="../Script/header.js" ></script>
+</body>
+</html>

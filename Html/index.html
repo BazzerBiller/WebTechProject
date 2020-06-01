@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../Css/main.css">
+    <title>HardwareWorld</title>
+    <script>
+    
+    function calculate(){
+        var result = "Hello "+hwform.userName.value;
+        event.preventDefault();
+        var selectedGPU = hwform.gpuSelect.value;
+        var selectedCPU = hwform.cpuSelect.value;
+        var selectedMB = hwform.mbSelect.value;
+        var selectedRam = hwform.ramSelect.value;
+        var hwPrices = [3000, 4000, 2000, 1000, 500, 250, 500, 250];
+        var totalPrice = hwPrices[selectedGPU] + hwPrices[selectedCPU] + hwPrices[selectedMB] + hwPrices[selectedRam];
+
+        if(hwform.budgetoption.value == "Expensive"){
+            totalPrice += 2000;
+        }
+        result += " your expected price from full unit is "+totalPrice+" TL";
+        hwform.priceResult.value = result
+        $( ".widget button" ).button();
+    }
+</script>
+    <style>    
+    #formcontainer{
+       grid-column: 2;
+       border-radius: 50px;
+    } 
+    #hwform h1{
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <!-- UpperBar, Which Represents The Content Of The Page and Specific Header Navigation -->
+    <section id="upperbar">
+        <div id="HomePage"><h1><a href="index.html">H&W</a></h1> </div>
+        <nav>
+            <ul>
+                <li class="header" ><a href="gpu.html" >GPU</a></li>
+                <li class="header" ><a href="cpu.html" >CPU</a></li>
+                <li class="header" ><a href="mb.html" >MOTHERBOARD</a></li>
+                <li class="header" ><a href="ram.html" >RAM</a></li>
+                <li class="header" ><a href="game.html" >GAME</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
+    </section>
+    <!-- Body Part Of The Website After UpperBar-->
+    <div class="Grid-Body">
+        <br>
+        <div>
+            <div class="images">
+                <img src="../Images/gpu.png" alt="">
+                <img style="height: 80px;" src="../Images/cpu.png" alt="">
+                <img src="../Images/motherboard.png" alt="">
+                <img src="../Images/ram.png" alt="">
+            </div>
+            <h2>What Is Computer Hardware?</h2>
+            Want to know what hardware is in your computer? Become a computer pro with our quick guide to these essential components and their roles.
+
+            Quite simply, computer hardware is the physical components that a computer system requires to function. It encompasses everything with a circuit board that operates within a PC or laptop; including the motherboard, graphics card, CPU (Central Processing Unit), ventilation fans, webcam, power supply, and so on.
+
+            Although the design of hardware differs between desktop PCs and laptops due to their differences in size, the same core components will be found in both. Without hardware, there would be no way of running the essential software that makes computers so useful. Software is defined as the virtual programs that run on your computer; that is, operating system, internet browser, word-processing documents, etc.
+
+            Although a computer can function only when both hardware and software are working together, the speed of a system will largely rely on the hardware used.
+
+            When building up a new computer, or simply replacing old parts, you may need to know the specific hardware in your computer. The purpose of this guide is therefore to help you understand the inner-workings of your computer.
+        </div>
+        <div id="formcontainer">
+            <form id="hwform">
+                <h1>Hardware Choose Form</h1>
+                <table>
+                    <tr>
+                        <td>Name to Form--></td>
+                        <td><input type="text" name="userName" placeholder="First and Lastname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First and Lastname'"></td>
+                    </tr>
+                    <tr>
+                        <td>Choose GPU --> </td>
+                        <td>
+                            <select name="gpuSelect">
+                                <option value="0">NVIDIA RTX2070</option>
+                                <option value="1">AMD 5700XT</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choose CPU --></td>
+                        <td>
+                            <select name="cpuSelect">
+                                <option value="2">Intel I9 9900K</option>
+                                <option value="3">AMD R9 3990X</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choose Motherboard --></td>
+                        <td>
+                            <select name="mbSelect">
+                                <option value="4">ASUS ROG Maximus XII</option>
+                                <option value="5">MSI MEG X399</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choose Ram --></td>
+                        <td>
+                            <select name="ramSelect">
+                                <option value="6">16GB RAM</option>
+                                <option value="7">8GB RAM</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choose Budget Option --></td>
+                        <td>
+                            <input type="radio" name="budgetoption" value="Budget">BudgetFriendly<br>
+                            <input type="radio" name="budgetoption" value="Expensive">MaximumPower<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="widget">
+                                <button onclick="calculate()" class="ui-button ui-widget ui-corner-all">Expected Price</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="priceResult" style="border-radius:10px; border:2px solid black;" cols="30" rows="10" placeholder="..." onfocus="this.placeholder = ''" onblur="this.placeholder = '...'"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form> 
+            <div>
+                <br>
+                <br>
+                *This form created for generate the expected price for fully completed unit. 
+                It requires only 4 hardware from user, then adds the neccessary hardwares to
+                complete the base unit.
+            </div>
+            
+        </div>
+    </div>
+   
+    <script src="../Script/header.js" ></script>
+</body>
+</html>

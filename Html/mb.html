@@ -1,0 +1,100 @@
+<script src="../Script/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function (){
+        $('#asus').on({
+            click: function(){
+                $('#MSIArticle').css('display', 'none')
+                $('#AsusArticle').css('display', 'none')
+                $('#AsusArticle' ).show( "slow" );
+                $('#AsusArticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+               
+            }
+        })
+        $('#msi').on({
+            click: function(){
+                $('#AsusArticle').css('display', 'none')
+                $('#MSIArticle').css('display', 'none')
+                $('#MSIArticle' ).show( "slow" );
+                $('#MSIArticle').css('display', 'inline-block')
+                $('.imageBlock').css('background-color', 'rgba(250,250, 250, 0)')
+                $(this).css('background-color', 'rgba(250,250, 250, 0.3)')
+                
+            }
+        })
+
+    })
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTHERBOARD</title>
+    <link rel="stylesheet" href="../Css/main.css">
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <style>
+        #AsusArticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 45px;
+        }
+        #MSIArticle{
+            display: none;
+            grid-column: 2;
+            border-radius: 45px;
+        }
+    </style>
+</head>
+<body>
+    <section id="upperbar">
+        <div id="HomePage"><h1><a href="index.html">H&W</a></h1> </div>
+        <nav>
+            <ul>
+                <li class="header" ><a href="gpu.html" >GPU</a></li>
+                <li class="header" ><a href="cpu.html" >CPU</a></li>
+                <li class="header" ><a href="motherboard.html" >MOTHERBOARD</a></li>
+                <li class="header" ><a href="ram.html" >RAM</a></li>
+                <li class="header" ><a href="game.html" >GAME</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
+    </section>
+    <!-- Body Part Of The Website After UpperBar-->
+    <div class="Grid-Body">
+        <br>
+        <div>
+            <div class="images">
+                <div id="asus" class="imageBlock"  > <img  src="../Images/Asus.png" alt=""> </div>
+                
+                <div id="msi" class="imageBlock" > <img src="../Images/MSI.png" alt=""> </div>
+            </div>
+            <h2>What Is MotherBoard?</h2>
+            Especially important for 3D rendering, the GPU does exactly what its name suggests and processes huge batches of graphic data. You will find that your computer’s graphics card has at least one GPU. As opposed to the basic on-board graphic capabilities that PC motherboards supply, dedicated graphics cards interface with the motherboard via an expansion slot to work almost exclusively on graphic rendering. This also means you can upgrade your graphics card if you want to get a bit more performance from your PC.
+        
+            Not only this, but modern GPUs fulfil a broad computational workload beyond just rendering, making them an extension to the central processing unit.
+            <br>
+            *Click Those Asus and Msı Icons to find out more information about that brand.
+        </div>
+        <div id="AsusArticle"  style="display: none;">
+            <div> <img src="../Images/AsusMB.png" alt=""> </div>
+            <br>
+            <h2>What Is Asus?</h2>
+            <br>
+            AsusTek Computer Inc.  is a Taiwan-based multinational computer and phone hardware and electronics company headquartered in Beitou District, Taipei, Taiwan. Its products include desktop computers, laptops, netbooks, mobile phones, networking equipment, monitors, WIFI routers, projectors, motherboards, graphics cards, optical storage, multimedia products, peripherals, wearables, servers, workstations, and tablet PCs. The company is also an original equipment manufacturer (OEM).
+            
+             <br>
+             *The Photo Seeing on the above is the Asus's one of the powerful MotherBoard version = Asus Rog Dominus 
+         </div>
+        <div  id="MSIArticle"  style="display: none;">
+            <div> <img  src="../Images/MsiMB.png" alt=""> </div>
+            <h2>What Is Msi?</h2>
+            AMD is the second largest maker of personal computer microprocessors after Intel. They also make flash memory, integrated circuits for networking devices, and programmable logic devices. AMD reports that it has sold over 100 million x86 (Windows-compatible) microprocessors. Its Athlon (formerly called the "K7") microprocessor, delivered in mid-1999, was the the first to support a 200 MHz bus. In March, 2000, AMD announced the first 1 gigahertz PC microprocessor in a new version of the Athlon.
+            <br>
+            *The Photo Seeing on the above is the Msı's one of the powerful MotherBoard version = ASUS TUF Z390-Plus 
+        </div>
+        <script src="../Script/header.js" ></script>
+</body>
+</html>

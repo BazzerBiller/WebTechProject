@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameArea</title>
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/game.css">
+    
+</head>
+<body>
+    <section id="upperbar">
+        <div id="HomePage"><h1><a href="index.html">H&W</a></h1> </div>
+        <nav>
+            <ul>
+                <li class="header" ><a href="gpu.html" >GPU</a></li>
+                <li class="header" ><a href="cpu.html" >CPU</a></li>
+                <li class="header" ><a href="mb.html" >MOTHERBOARD</a></li>
+                <li class="header" ><a href="ram.html" >RAM</a></li>
+                <li class="header" ><a href="game.html" >GAME</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
+    </section>
+    <div id="gameContainer" >
+        <section class="gameArea">
+            <div class="game-card" data-framework="Cpu" >  
+
+                <img class="front-face" src="../Images/AMDcpuPhoto.png" alt="cpu">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Cpu" >  
+                <img class="front-face" src="../Images/IntelCPU.png" alt="cpu">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Mb" >  
+                <img class="front-face" src="../Images/AsusMB.png" alt="mb">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Mb"  >  
+                <img class="front-face" src="../Images/MsiMB.png" alt="mb">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Ram" >  
+                <img class="front-face" src="../Images/CorsairRam.png" alt="ram">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Ram" >  
+                <img class="front-face" src="../Images/HyperxRam.png" alt="ram">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Gpu" >  
+                <img class="front-face" src="../Images/NvidiaGPU.png" alt="gpu">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="Gpu"  >  
+                <img class="front-face" src="../Images/AMDgpu.png" alt="gpu">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="gpuC" >  
+                <img class="front-face" src="../Images/nvidia.png" alt="Gpucompany">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="gpuC" >  
+                <img class="front-face" src="../Images/amd.png" alt="Gpucompany">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="ramC" >  
+                <img class="front-face" src="../Images/Corsair.png" alt="Ramcompany">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+            <div class="game-card" data-framework="ramC" >  
+                <img class="front-face" src="../Images/Hyperx.png" alt="Ramcompany">
+                <img class="back-face" src="../Images/HW.jpg" alt="">    
+            </div>
+        </section>
+        <div id="startbtn">
+            <a  href="game.html">Start Again!</a>
+        </div>
+        <div id="desc" >
+            Game Description = This game is based on the common GPU's, CPU's or same other companies. You have to find not exact GPU models but GPU's, CPU's etc.
+        </div>
+    </div>
+    <script src="../Script/jquery-3.5.1.min.js"></script>
+    <script src="../Script/jquery-3.5.1.js"></script>
+    <script src="../Script/game.js" ></script>
+    <script src="../Script/header.js" ></script>
+</body>
+</html>
